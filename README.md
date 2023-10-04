@@ -22,7 +22,7 @@ How i would compile (without script)
 
 first clone the project and cd into it
 ```
-git clone PLACE_HOLDER
+git clone https://github.com/drplague1/CIterator.git
 
 cd CIterator
 ```
@@ -35,5 +35,5 @@ this outputs the object file
 
 finally we create the static library with
 ```
-ar -rvs ./CIterator.o
+ar -rvs ./libCIterator.o
 ```

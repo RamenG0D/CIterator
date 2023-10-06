@@ -35,5 +35,5 @@ this outputs the object file
 
 finally we create the static library with
 ```
-ar -rvs ./libCIterator.o
+ar -rvs libCIterator.a ./CIterator.o
 ```

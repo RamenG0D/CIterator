@@ -7,7 +7,7 @@ typedef struct Iterator Iterator;
 /// @brief creates a new iterator from the given text
 /// @param text the text to iterate over
 /// @return returns a new iterator
-Iterator* IteratorNew(void* data);
+Iterator* IteratorNew(void* data, int length);
 
 /// @brief destroys the given iterator (MUST BE CALLED TO FREE THE ITERATOR)
 /// @param iter the iterator to destroy

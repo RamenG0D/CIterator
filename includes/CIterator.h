@@ -32,10 +32,20 @@ void* IteratorPeekNext(Iterator* iter);
 /// @param iter the iterator
 void IteratorBack(Iterator* iter);
 
+/// @brief gets the current index of the iterator
+/// @param iter the iterator
+/// @return returns the current index of the iterator
+int IteratorGetIndex(Iterator* iter);
+
+/// @brief checks if the iterator is done iterating
+/// @param iter the iterator
+/// @return returns 1 if the iterator is done iterating, 0 otherwise
+int IteratorIsDone(Iterator* iter);
+
 #define NewIteratorType(type) \
     typedef struct Iterator Iterator_##type; \
-    Iterator_##type* Iterator_##type##_New(type* data) { \
-        return (Iterator_##type*)IteratorNew(data); \
+    Iterator_##type* Iterator_##type##_New(type* data, size_t length) { \
+        return (Iterator_##type*)IteratorNew(data, (int)length); \
     } \
     void Iterator_##type##_Destroy(Iterator_##type* iter) { \
         IteratorDestroy(iter); \

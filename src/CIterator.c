@@ -75,3 +75,7 @@ int IteratorGetIndex(Iterator* iter) {
 int IteratorIsDone(Iterator* iter) {
     return iter->index >= iter->length;
 }
+
+void IteratorSkip(Iterator* iter) {
+    iter->index++;
+}

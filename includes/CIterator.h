@@ -42,6 +42,10 @@ int IteratorGetIndex(Iterator* iter);
 /// @return returns 1 if the iterator is done iterating, 0 otherwise
 int IteratorIsDone(Iterator* iter);
 
+/// @brief skips the next char in the iterator
+/// @param iter the iterator
+void IteratorSkip(Iterator* iter);
+
 #define NewIteratorType(type) \
     typedef struct Iterator Iterator_##type; \
     Iterator_##type* Iterator_##type##_New(type* data, size_t length) { \
